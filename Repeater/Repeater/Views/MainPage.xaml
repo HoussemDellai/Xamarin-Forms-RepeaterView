@@ -15,12 +15,13 @@
             <Label Text="RepeaterView for Students"
                    FontSize="30" />
 
-            <repeater:RepeaterView ItemsSource="{Binding Students}"
-                                   Spacing="10">
+            <repeater:RepeaterView ItemsSource="{Binding Students}">
+                
                 <repeater:RepeaterView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="20"
+                                  Margin="10"
                                   BackgroundColor="DodgerBlue">
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="Student_Tapped" />
@@ -36,12 +37,13 @@
             <Label Text="RepeaterView for Employees"
                    FontSize="30" />
 
-            <repeater:RepeaterView ItemsSource="{Binding Employees}"
-                                   Spacing="10">
+            <repeater:RepeaterView ItemsSource="{Binding Employees}">
+                
                 <repeater:RepeaterView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="20"
+                                  Margin="10"
                                   BackgroundColor="DeepPink">
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="Employee_Tapped"/>

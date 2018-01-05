@@ -20,11 +20,9 @@
       Sample implementation for Repeater for Xamarin Forms.
     </description>
     <summary>Sample implementation for Repeater for Xamarin Forms.</summary>
-    <tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios, Foursquare</tags>
+    <tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios</tags>
     <dependencies>
       <dependency id="Xamarin.Forms" version="2.5.0" />
-      <!--<dependency id="Plugin.Share" version="4.0.2" />-->
-     
     </dependencies>
   </metadata>
   <files>
