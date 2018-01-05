@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Repeater"
+             x:Class="Repeater.Views.MainPage"
+             xmlns:controls="clr-namespace:Repeater.Controls"
+             xmlns:viewModels="clr-namespace:Repeater.ViewModels">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout>
+
+            <Label Text="RepeaterView for Students"
+                   FontSize="30" />
+
+            <controls:RepeaterView ItemsSource="{Binding Students}"
+                                   Spacing="10">
+                <controls:RepeaterView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="20"
+                                  BackgroundColor="DodgerBlue">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Student_Tapped" />
+                                </Grid.GestureRecognizers>
+                                <Label Text="{Binding .}"
+                                       FontSize="36" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </controls:RepeaterView.ItemTemplate>
+            </controls:RepeaterView>
+
+            <Label Text="RepeaterView for Employees"
+                   FontSize="30" />
+
+            <controls:RepeaterView ItemsSource="{Binding Employees}"
+                                   Spacing="10">
+                <controls:RepeaterView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="20"
+                                  BackgroundColor="DeepPink">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Employee_Tapped"/>
+                                </Grid.GestureRecognizers>
+                                
+                                <Label Text="{Binding .}"
+                                       FontSize="36" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </controls:RepeaterView.ItemTemplate>
+            </controls:RepeaterView>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
